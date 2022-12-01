@@ -19,7 +19,7 @@ export const Heading4 = styled.h4`
 `;
 
 export const MainParagraph = styled.p`
-  font-size: 30px;
+  font-size: 32px;
   width: 100%;
   height: fit-content;
   line-height: 32px;
@@ -31,7 +31,7 @@ export const SecondParagraph = styled.p`
   width: 85%;
   height: fit-content;
   line-height: 17px;
-  color: ${props => props.theme.color};
+  color: ${(props) => props.theme.color};
 `;
 
 export const ContainerTextButton = styled.div`

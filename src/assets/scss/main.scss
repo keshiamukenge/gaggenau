@@ -1,10 +1,14 @@
+@font-face {
+  font-family: "Atyp Display";
+  src: url("@/assets/fonts/AtypDisplay-Light.ttf") format("ttf");
+}
 // COLORS
 $black: #101010;
-$white-color: #edeeed;
+$white-color: #ffffff;
 $dark-grey-color: #1c1c1c;
 $grey-color: #616062;
 // FONTS
-$main-font: acumin-pro, sans-serif;
+$main-font: "Atyp Display";
 // FONTS SIZES
 $h1-desktop-size: 50px;
 
@@ -22,6 +26,7 @@ body {
     font-size: 16.2vw;
     color: $white-color;
     text-transform: uppercase;
+    font-weight: 200;
   }
 
   h2 {
@@ -54,6 +59,7 @@ body {
     color: $white-color;
     font-size: 16px;
     line-height: 20px;
+    font-weight: 200;
   }
 
   img {

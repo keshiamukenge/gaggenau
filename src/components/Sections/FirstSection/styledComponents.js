@@ -9,6 +9,7 @@ export const SectionElement = styled.section`
 
 export const InformationText = styled.p`
   font-size: 100px;
+  font-weight: 400;
   text-align: center;
   line-height: 100px;
   width: 70%;
@@ -23,7 +24,7 @@ export const ContainerImage = styled.div`
   height: 350px;
   margin: auto;
   position: absolute;
-  top: 66%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
 `;

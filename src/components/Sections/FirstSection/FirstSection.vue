@@ -4,7 +4,7 @@
       An exceptional reputation built by hand since 1683
     </InformationText>
     <ContainerImage>
-      <img src="@/assets/images/7.webp" />
+      <img src="@/assets/images/1.png" />
     </ContainerImage>
   </SectionElement>
 </template>
