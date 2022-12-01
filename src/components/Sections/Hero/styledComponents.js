@@ -27,7 +27,7 @@ export const SmallParagraph = styled.p`
 
 export const Heading1 = styled.h1`
   width: 100%;
-  margin-bottom: 1rem;
+  margin-top: 3rem;
 `;
 
 export const FlexContainer = styled.div`

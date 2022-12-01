@@ -9,6 +9,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "components-library": "gitlab:tkagency1/components-library#feat/text-animation",
     "pinia": "^2.0.26",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
@@ -19,6 +20,7 @@
     "@vue/eslint-config-prettier": "^7.0.0",
     "eslint": "^8.22.0",
     "eslint-plugin-vue": "^9.3.0",
+    "gsap": "^3.11.3",
     "prettier": "^2.7.1",
     "sass": "^1.56.1",
     "sass-loader": "^13.2.0",

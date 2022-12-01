@@ -5,9 +5,9 @@
       <img src="@/assets/images/13.webp" />
     </ContainerImage>
     <FlexContainer>
-      <SmallParagraph
-        >We are pleased to welcome you in a world of pure beauty</SmallParagraph
-      >
+      <SmallParagraph>
+        We are pleased to welcome you in a world of pure beauty
+      </SmallParagraph>
       <DefaultButton text="Experience more" />
     </FlexContainer>
   </SectionElement>
