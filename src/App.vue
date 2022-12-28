@@ -2,7 +2,6 @@
   <div>
     <Header />
     <RouterView />
-    <Footer />
   </div>
 </template>
 
@@ -10,5 +9,4 @@
 import { RouterView } from "vue-router";
 
 import Header from "@/components/Header/Header.vue";
-import Footer from "@/components/Footer/Footer.vue";
 </script>

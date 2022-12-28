@@ -24,7 +24,7 @@ export const ContainerImage = styled.div`
   height: 350px;
   margin: auto;
   position: absolute;
-  top: 65%;
-  left: 50%;
+  top: 50%;
+  left: 30%;
   transform: translate(-50%, -50%);
 `;
