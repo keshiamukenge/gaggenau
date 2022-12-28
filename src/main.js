@@ -6,6 +6,7 @@ import router from "./router";
 
 import "./assets/scss/reset.scss";
 import "./assets/scss/main.scss";
+import "./assets/scss/locomotive-scroll.scss";
 
 const app = createApp(App);
 

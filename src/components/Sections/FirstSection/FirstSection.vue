@@ -3,7 +3,7 @@
     <InformationText>
       An exceptional reputation built by hand since 1683
     </InformationText>
-    <ContainerImage>
+    <ContainerImage data-scroll data-scroll-speed="2">
       <img src="@/assets/images/1.png" />
     </ContainerImage>
   </SectionElement>
