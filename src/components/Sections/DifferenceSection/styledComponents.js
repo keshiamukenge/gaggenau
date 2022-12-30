@@ -31,7 +31,7 @@ export const SecondParagraph = styled.p`
   width: 85%;
   height: fit-content;
   line-height: 17px;
-  color: ${(props) => props.theme.color};
+  color: ${props => props.theme.color};
 `;
 
 export const ContainerTextButton = styled.div`

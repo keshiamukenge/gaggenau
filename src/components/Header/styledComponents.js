@@ -1,5 +1,9 @@
 import styled from "vue3-styled-components";
 
+import breakpoints from "../../responsive";
+
+const { s } = breakpoints;
+
 export const ContainerHeader = styled.header`
   width: 100%;
   position: fixed;
@@ -9,6 +13,10 @@ export const ContainerHeader = styled.header`
   padding: 1rem 5%;
   z-index: 99;
   align-items: baseline;
+
+  @media screen and (max-width: ${s}) {
+    width: 100vw;
+  }
 `;
 
 export const ContainerLogo = styled.div`
@@ -77,6 +85,10 @@ export const ContainerMenuItem = styled.li`
   &:hover {
     cursor: pointer;
   }
+
+  @media screen and (max-width: ${s}) {
+    height: fit-content;
+  }
 `;
 
 export const MenuItem = styled.span`
@@ -84,11 +96,19 @@ export const MenuItem = styled.span`
   font-weight: 200;
   text-transform: uppercase;
   white-space: nowrap;
+
+  @media screen and (max-width: ${s}) {
+    font-size: 34px;
+  }
 `;
 
 export const Number = styled.span`
   font-size: 16px;
   font-weight: 200;
+
+  @media screen and (max-width: ${s}) {
+    margin: 0 0.5rem;
+  }
 `;
 
 export const ContainerImageMenuItem = styled.div`
@@ -100,6 +120,10 @@ export const ContainerImageMenuItem = styled.div`
     width: 100%;
     height: 85%;
     object-fit: cover;
+  }
+
+  @media screen and (max-width: ${s}) {
+    display: none;
   }
 `;
 
