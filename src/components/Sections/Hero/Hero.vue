@@ -8,7 +8,7 @@
       <SmallParagraph>
         We are pleased to welcome you in a world of pure beauty
       </SmallParagraph>
-      <DefaultButton text="Experience more" />
+      <DefaultButton class="hero-button" text="Experience more" />
     </FlexContainer>
   </SectionElement>
 </template>

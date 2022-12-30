@@ -1,5 +1,9 @@
 import styled from "vue3-styled-components";
 
+import breakpoints from "../responsive";
+
+const { s, m, l } = breakpoints;
+
 const mainContainerProps = {
   margin: String,
   padding: String,
@@ -17,11 +21,28 @@ export const MainContainer = styled("section", mainContainerProps)`
   height: fit-content;
   padding: ${props => props.padding};
   margin: ${props => props.margin};
+
+  @media screen and (max-width: ${s}) {
+    display: block;
+    margin: 3rem 0;
+
+    .block-text-button {
+      margin-top: 2rem;
+    }
+  }
 `;
 
 export const ContainerContent = styled.div`
   width: 45%;
   height: fit-content;
+
+  @media screen and (max-width: ${s}) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: ${m}) and (max-width: ${l}) {
+    width: 70%;
+  }
 `;
 
 export const Heading4 = styled.h4`
@@ -34,6 +55,10 @@ export const MainParagraph = styled.p`
   height: fit-content;
   line-height: 32px;
   margin-bottom: 2rem;
+
+  @media screen and (max-width: ${s}) {
+    margin-top: 2rem;
+  }
 `;
 
 export const SecondParagraph = styled.p`
@@ -48,6 +73,10 @@ export const ContainerTextButton = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  @media screen and (max-width: ${s}) {
+    display: block;
+  }
 `;
 
 export const ContainerAnimatedLetters = styled("div", animatedLettersProps)`
