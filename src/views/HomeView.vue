@@ -5,7 +5,9 @@
     <DifferenceSection />
     <GridSection />
     <ArtKitchenSection />
+    <SliderSection />
     <OurMasterpieceSection />
+    <OurMagazineSection />
     <ImagesSection />
     <Footer />
   </main>
@@ -23,6 +25,8 @@ import GridSection from "@/components/Sections/GridSection/GridSection.vue";
 import ArtKitchenSection from "@/components/Sections/ArtKitchenSection/ArtKitchenSection.vue";
 import OurMasterpieceSection from "@/components/Sections/OurMasterpieceSection/OurMasterpieceSection.vue";
 import ImagesSection from "@/components/Sections/ImagesSection/ImagesSection.vue";
+import SliderSection from "@/components/Sections/SliderSection/SliderSection.vue";
+import OurMagazineSection from "@/components/Sections/OurMagazineSection/OurMagazineSection.vue";
 
 const mainContainer = ref(null);
 

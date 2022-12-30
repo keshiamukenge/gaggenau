@@ -52,7 +52,7 @@ defineProps({
   },
   padding: {
     type: String,
-    default: "5rem 5%",
+    default: "5rem 2rem",
   },
 });
 </script>

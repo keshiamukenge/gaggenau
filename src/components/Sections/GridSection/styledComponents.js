@@ -7,7 +7,7 @@ const { s, m, l } = breakpoints;
 export const ContainerGrid = styled.section`
   width: 100%;
   height: fit-content;
-  padding: 0 5%;
+  padding: 0 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;

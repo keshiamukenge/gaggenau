@@ -8,7 +8,7 @@ export const ContainerSection = styled.section`
   width: 100%;
   height: 80vh;
   margin: 15rem 0;
-  padding: 0 5%;
+  padding: 0 2rem;
   display: flex;
 
   @media screen and (max-width: ${s}) {

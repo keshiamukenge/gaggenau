@@ -15,7 +15,7 @@
       </ContainerTextPart>
     </ContainerPart>
     <ContainerPart class="art-kitchen-image">
-      <img src="@/assets/images/12.webp" />
+      <img src="@/assets/images/12.png" />
     </ContainerPart>
   </ContainerSection>
 </template>

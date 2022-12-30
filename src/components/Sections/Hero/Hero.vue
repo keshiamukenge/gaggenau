@@ -2,7 +2,7 @@
   <SectionElement>
     <Heading1>Gaggenau</Heading1>
     <ContainerImage>
-      <img src="@/assets/images/13.webp" />
+      <img src="@/assets/images/13.png" />
     </ContainerImage>
     <FlexContainer>
       <SmallParagraph>
