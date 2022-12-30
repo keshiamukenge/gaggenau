@@ -11,7 +11,7 @@ export const SectionElement = styled.section`
   margin-top: 10rem;
 
   @media screen and (max-width: ${s}) {
-    padding: 0 5%;
+    padding: 0 2rem;
     height: 60vh;
   }
 `;

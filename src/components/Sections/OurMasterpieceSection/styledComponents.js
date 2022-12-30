@@ -7,7 +7,7 @@ const { s, m, l } = breakpoints;
 export const ContainerSection = styled.section`
   width: 100%;
   height: fit-content;
-  padding: 0 5%;
+  padding: 0 2rem;
 
   @media screen and (max-width: ${s}) {
     margin-bottom: 5rem;

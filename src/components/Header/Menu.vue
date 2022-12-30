@@ -37,7 +37,7 @@
             >
               <MenuItem> For owners </MenuItem>
               <ContainerImageMenuItem>
-                <img src="@/assets/images/12.webp" />
+                <img src="@/assets/images/12.png" />
               </ContainerImageMenuItem>
               <Number>03</Number>
             </ContainerContentMenuItem>
@@ -63,7 +63,7 @@
             >
               <MenuItem> Visit us </MenuItem>
               <ContainerImageMenuItem>
-                <img src="@/assets/images/10.webp" />
+                <img src="@/assets/images/10.png" />
               </ContainerImageMenuItem>
               <Number>05</Number>
             </ContainerContentMenuItem>

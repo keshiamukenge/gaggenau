@@ -11,11 +11,11 @@ export const ContainerImagesSection = styled.section`
 
   @media screen and (max-width: ${s}) {
     .last-section-img-2 {
-      display: none;
+      width: 100%;
     }
 
     .last-section-img-1 {
-      width: 100%;
+      display: none;
     }
   }
 `;
