@@ -7,7 +7,7 @@
         <ThemeProvider :theme="{ color: colors.grey }">
           <SecondParagraph>{{ secondParagraph }}</SecondParagraph>
         </ThemeProvider>
-        <DefaultButton :text="buttonText" />
+        <DefaultButton class="block-text-button" :text="buttonText" />
       </ContainerTextButton>
     </ContainerContent>
   </MainContainer>

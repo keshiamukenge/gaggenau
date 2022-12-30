@@ -1,5 +1,9 @@
 import styled from "vue3-styled-components";
 
+import breakpoints from "../../responsive";
+
+const { s, m, l } = breakpoints;
+
 const gridPositionProps = {
   gridColumn: String,
   gridRow: String,
@@ -14,6 +18,104 @@ export const ContainerFooter = styled.footer`
   grid-template-rows: auto auto;
   padding: 8rem 5% 25rem 5%;
   grid-row-gap: 2rem;
+
+  .rs {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+  }
+
+  @media screen and (max-width: ${s}) {
+    grid-template-columns: 1fr 1fr;
+    height: fit-content;
+    padding: 8rem 5% 8rem 5%;
+
+    .contact-button {
+      grid-column: 1/3;
+      grid-row: 1;
+      margin-bottom: 2rem;
+    }
+
+    .product-title {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    .product-list {
+      grid-column: 1/3;
+      grid-row: 3;
+    }
+
+    .inspiration-title {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    .inspiration-list {
+      grid-column: 2;
+      grid-row: 3;
+    }
+
+    .get-support-title {
+      grid-column: 1;
+      grid-row: 4;
+    }
+
+    .get-support-list {
+      grid-column: 1;
+      grid-row: 5;
+    }
+
+    .rs {
+      grid-column: 2;
+      grid-row: 4;
+    }
+  }
+
+  @media screen and (min-width: ${m}) and (max-width: ${l}) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    .contact-button {
+      grid-column: 1/4;
+      grid-row: 1;
+      margin-bottom: 2rem;
+    }
+
+    .product-title {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    .product-list {
+      grid-column: 1;
+      grid-row: 3;
+    }
+
+    .inspiration-title {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    .inspiration-list {
+      grid-column: 2;
+      grid-row: 3;
+    }
+
+    .get-support-title {
+      grid-column: 3;
+      grid-row: 2;
+    }
+
+    .get-support-list {
+      grid-column: 3;
+      grid-row: 3;
+    }
+
+    .rs {
+      grid-column: 4;
+      grid-row: 2;
+    }
+  }
 `;
 
 export const ListTitle = styled("h4", gridPositionProps)`

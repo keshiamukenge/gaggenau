@@ -1,6 +1,6 @@
 <template>
   <ContainerSection>
-    <ContainerPart>
+    <ContainerPart class="art-kitchen-text">
       <ContainerTextPart>
         <h2>The art of kitchen</h2>
         <ContainerTextButton>
@@ -14,7 +14,7 @@
         </ContainerTextButton>
       </ContainerTextPart>
     </ContainerPart>
-    <ContainerPart>
+    <ContainerPart class="art-kitchen-image">
       <img src="@/assets/images/12.webp" />
     </ContainerPart>
   </ContainerSection>
