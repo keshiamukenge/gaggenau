@@ -10,7 +10,7 @@ export const ContainerHeader = styled.header`
   height: fit-content;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 5%;
+  padding: 1rem 2rem;
   z-index: 99;
   align-items: baseline;
 
@@ -68,7 +68,7 @@ export const ContainerMenuContent = styled.div`
 export const ContainerList = styled.ul`
   width: fit-content;
   height: fit-content;
-  padding: 0 5%;
+  padding: 0 3%;
   margin: auto;
   position: absolute;
   top: 50%;

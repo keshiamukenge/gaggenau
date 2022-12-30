@@ -11,15 +11,57 @@ const gridPositionProps = {
 
 export const ContainerFooter = styled.footer`
   width: 100%;
-  height: 50vh;
+  height: fit-content;
   background-color: ${props => props.theme.backgroundColor};
   display: grid;
   grid-template-columns: 40% 15% 15% 15% 15%;
   grid-template-rows: auto auto;
-  padding: 8rem 5% 25rem 5%;
+  padding: 8rem 2rem 25rem 2rem;
   grid-row-gap: 2rem;
+  padding-bottom: 5rem;
+
+  .contact-button {
+    grid-column: 1/3;
+    grid-row: 1;
+    margin-bottom: 8rem;
+  }
+
+  .product-title {
+    grid-column: 2;
+    grid-row: 3;
+    margin-bottom: 2rem;
+  }
+
+  .product-list {
+    grid-column: 2;
+    grid-row: 4;
+  }
+
+  .inspiration-title {
+    grid-column: 3;
+    grid-row: 3;
+    margin-bottom: 2rem;
+  }
+
+  .inspiration-list {
+    grid-column: 3;
+    grid-row: 4;
+  }
+
+  .get-support-title {
+    grid-column: 4;
+    grid-row: 3;
+    margin-bottom: 2rem;
+  }
+
+  .get-support-list {
+    grid-column: 4;
+    grid-row: 4;
+  }
 
   .rs {
+    grid-column: 5;
+    grid-row: 3;
     display: flex;
     align-items: center;
     height: fit-content;

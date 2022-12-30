@@ -20,7 +20,7 @@ export const SectionElement = styled.section`
   width: 100%;
   height: 100vh;
   max-height: 100vh;
-  padding: 1.5rem 5% 0 5%;
+  padding: 1.5rem 2rem 0 2rem;
 `;
 
 export const SmallParagraph = styled.p`
@@ -40,6 +40,10 @@ export const SmallParagraph = styled.p`
 export const Heading1 = styled.h1`
   width: 100%;
   margin-top: 3rem;
+
+  @media screen and (max-width: ${s}) {
+    font-size: 15.2vw;
+  }
 `;
 
 export const FlexContainer = styled.div`
@@ -54,8 +58,8 @@ export const FlexContainer = styled.div`
     .hero-button {
       position: absolute;
       bottom: 25px;
-      left: 5%;
-      right: 5%;
+      left: 2rem;
+      right: 2rem;
 
       div {
         width: 100%;

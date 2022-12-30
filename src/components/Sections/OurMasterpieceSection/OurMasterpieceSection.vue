@@ -1,7 +1,7 @@
 <template>
   <ContainerSection>
     <ContainerImage>
-      <img src="@/assets/images/10.webp" />
+      <img src="@/assets/images/10.png" />
     </ContainerImage>
     <TextBlock
       heading4="Our masterpiece"
