@@ -28,4 +28,5 @@ export const TextArrowButton = styled.span`
   font-size: 30px;
   color: ${props => props.theme.color};
   margin-right: 0.5rem;
+  text-transform: uppercase;
 `;

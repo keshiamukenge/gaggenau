@@ -9,7 +9,7 @@
       <TextContent>(Warming drawer)</TextContent>
     </ContainerImage>
     <ContainerImage class="el-3">
-      <TextContent>
+      <TextContent class="grid-section-button-item">
         <ArrowButton text="See all appliances" />
       </TextContent>
     </ContainerImage>
