@@ -1,7 +1,7 @@
 <template>
   <Container @mouseenter="onHover" @mouseleave="() => onLeaveImage(image)">
     <ContainerImage :height="imgHeight">
-      <img :src="src" ref="image" />
+      <slot ref="image" />
     </ContainerImage>
     <ContainerTextArrow>
       <TextElement>
@@ -25,10 +25,6 @@ import {
 } from "./styledComponents";
 
 defineProps({
-  src: {
-    type: String,
-    default: "src/assets/images/16.png",
-  },
   imgHeight: {
     type: String,
     default: "30px",

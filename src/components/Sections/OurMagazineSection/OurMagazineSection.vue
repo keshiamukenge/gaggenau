@@ -4,20 +4,24 @@
       <ImageAndText
         text="This home is a refuge from th rugged wind-swept"
         imgHeight="348px"
-      />
+      >
+        <img src="@/assets/images/16.png" />
+      </ImageAndText>
       <ImageAndText
         text="The creation, conception and design of a Gaggeneau"
-        src="src/assets/images/17.png"
         imgHeight="482px"
-      />
+      >
+        <img src="@/assets/images/17.png" />
+      </ImageAndText>
       <ContainerArrowButton>
         <ArrowButton text="Our magazine" />
       </ContainerArrowButton>
       <ImageAndText
         text="A group of people who work to create, craft and develop"
-        src="src/assets/images/18.png"
         imgHeight="295px"
-      />
+      >
+        <img src="@/assets/images/18.png" />
+      </ImageAndText>
     </ContainerContent>
   </ContainerSection>
 </template>
