@@ -2,15 +2,17 @@
   <ThemeProvider :theme="{ color: colors.grey }">
     <ContainerSection>
       <ContainerText>
-        <h4>Welcome to our</h4>
+        <Heading4>Welcome to our</Heading4>
         <MainText>Milan</MainText>
       </ContainerText>
       <Swiper
         :slides-per-view="1"
         :space-between="50"
-        navigation
-        @swiper="onSwiper"
-        @slideChange="onSlideChange"
+        :grabCursor="true"
+        :loop="true"
+        :centeredSlides="true"
+        :slidesPerView="2"
+        :spaceBetween="50"
       >
         <SwiperSlide>
           <ContainerImage>
@@ -27,8 +29,8 @@
             <img src="@/assets/images/slider/3.png" />
           </ContainerImage>
         </SwiperSlide>
-        <!-- <LeftArrowIcon class="left-arrow-slider" />
-        <RightArrowIcon class="right-arrow-slider" /> -->
+        <LeftArrowIcon class="swiper-button-prev prev" />
+        <RightArrowIcon class="swiper-button-next next" />
       </Swiper>
       <ContainerTextContent>
         <SecondText>Design week</SecondText>
@@ -45,11 +47,13 @@
 <script setup>
 import { ThemeProvider } from "vue3-styled-components";
 import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css/navigation";
+import "swiper/css/parallax";
 import "swiper/css";
 
 import { colors } from "@/theme.js";
 import DefaultButton from "../../Button/DefaultButton.vue";
-// import { LeftArrowIcon, RightArrowIcon } from "@/assets/SvgIcons";
+import { LeftArrowIcon, RightArrowIcon } from "@/assets/SvgIcons";
 import {
   ContainerSection,
   ContainerText,
@@ -58,12 +62,6 @@ import {
   ContainerTextContent,
   SecondText,
   TextContent,
+  Heading4,
 } from "./styledComponents";
-
-const onSwiper = swiper => {
-  console.log(swiper);
-};
-const onSlideChange = () => {
-  console.log("slide change");
-};
 </script>

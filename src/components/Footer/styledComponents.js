@@ -178,4 +178,10 @@ export const Item = styled.h5`
   width: fit-content;
   height: fit-content;
   margin-bottom: 6px;
+
+  &:hover {
+    color: #ffffff;
+    transition: 400ms linear;
+    cursor: pointer;
+  }
 `;

@@ -14,6 +14,12 @@ export const ContainerGrid = styled.section`
   grid-gap: 20px;
   margin: 10rem 0;
 
+  .el-3 {
+    h3 {
+      bottom: initial;
+    }
+  }
+
   @media screen and (max-width: ${s}) {
     margin: 3rem 0;
     grid-template-columns: 1fr 1fr;
@@ -29,6 +35,7 @@ export const ContainerGrid = styled.section`
       h3 {
         left: 0;
         font-size: 30px;
+        bottom: 10px;
       }
     }
 
@@ -57,6 +64,10 @@ export const ContainerImage = styled.div`
   width: 100%;
   height: 48vh;
   position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   img {
     position: absolute;

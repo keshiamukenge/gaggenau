@@ -14,6 +14,10 @@ export const ContainerButton = styled("div", buttonSizeProps)`
   color: ${props => props.theme.color};
   font-size: ${props => (props.smallButton ? "14px" : " 60px")};
   white-space: nowrap;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const ContainerArrowButton = styled.div`
@@ -21,6 +25,10 @@ export const ContainerArrowButton = styled.div`
   width: fit-content;
   height: fit-content;
   align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const TextArrowButton = styled.span`
@@ -28,4 +36,5 @@ export const TextArrowButton = styled.span`
   font-size: 30px;
   color: ${props => props.theme.color};
   margin-right: 0.5rem;
+  text-transform: uppercase;
 `;
