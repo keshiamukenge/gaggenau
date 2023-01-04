@@ -1,7 +1,7 @@
 <template>
-  <Container @mouseenter="onHover" @mouseleave="() => onLeaveImage(image)">
-    <ContainerImage :height="imgHeight">
-      <slot ref="image" />
+  <Container @mouseenter="onHover" @mouseleave="onLeave">
+    <ContainerImage ref="image" :height="imgHeight">
+      <slot />
     </ContainerImage>
     <ContainerTextArrow>
       <TextElement>
@@ -39,11 +39,15 @@ const startAnimation = ref(false);
 const image = ref(null);
 
 function onHover() {
-  onImageHovered(image.value);
+  onImageHovered(image.value.$el);
   startAnimation.value = true;
 
   setTimeout(() => {
     startAnimation.value = false;
   }, 700);
+}
+
+function onLeave() {
+  onLeaveImage(image.value.$el);
 }
 </script>
