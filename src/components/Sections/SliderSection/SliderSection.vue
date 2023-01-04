@@ -8,7 +8,6 @@
       <Swiper
         :slides-per-view="1"
         :space-between="50"
-        @swiper="onSwiper"
         :grabCursor="true"
         :loop="true"
         :centeredSlides="true"
@@ -65,8 +64,4 @@ import {
   TextContent,
   Heading4,
 } from "./styledComponents";
-
-const onSwiper = swiper => {
-  console.log(swiper);
-};
 </script>

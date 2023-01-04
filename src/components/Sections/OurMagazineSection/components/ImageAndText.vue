@@ -1,18 +1,21 @@
 <template>
-  <Container>
+  <Container @mouseenter="onHover" @mouseleave="() => onLeaveImage(image)">
     <ContainerImage :height="imgHeight">
-      <img :src="src" />
+      <img :src="src" ref="image" />
     </ContainerImage>
     <ContainerTextArrow>
       <TextElement>
         {{ text }}
       </TextElement>
-      <ArrowCircleIcon />
+      <ArrowCircleIcon :startAnimation="startAnimation" />
     </ContainerTextArrow>
   </Container>
 </template>
 
 <script setup>
+import { ref } from "vue";
+import { onImageHovered, onLeaveImage } from "@/utils/animations.js";
+
 import { ArrowCircleIcon } from "@/assets/SvgIcons";
 import {
   Container,
@@ -24,7 +27,7 @@ import {
 defineProps({
   src: {
     type: String,
-    default: "",
+    default: "src/assets/images/16.png",
   },
   imgHeight: {
     type: String,
@@ -35,4 +38,16 @@ defineProps({
     default: "Default text",
   },
 });
+
+const startAnimation = ref(false);
+const image = ref(null);
+
+function onHover() {
+  onImageHovered(image.value);
+  startAnimation.value = true;
+
+  setTimeout(() => {
+    startAnimation.value = false;
+  }, 700);
+}
 </script>

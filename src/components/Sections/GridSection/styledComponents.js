@@ -65,6 +65,10 @@ export const ContainerImage = styled.div`
   height: 48vh;
   position: relative;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   img {
     position: absolute;
     top: 0;

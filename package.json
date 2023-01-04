@@ -9,7 +9,6 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "components-library": "gitlab:tkagency1/components-library#feat/text-animation",
     "locomotive-scroll": "^4.1.4",
     "pinia": "^2.0.26",
     "vue": "^3.2.45",

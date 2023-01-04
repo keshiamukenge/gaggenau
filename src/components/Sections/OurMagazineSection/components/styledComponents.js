@@ -11,6 +11,10 @@ export const Container = styled.div`
   width: fit-content;
   height: fit-content;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   @media screen and (max-width: ${s}) {
     margin-right: 0;
     width: 100%;

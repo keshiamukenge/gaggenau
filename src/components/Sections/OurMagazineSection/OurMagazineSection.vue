@@ -3,12 +3,11 @@
     <ContainerContent>
       <ImageAndText
         text="This home is a refuge from th rugged wind-swept"
-        src="./src/assets/images/16.png"
         imgHeight="348px"
       />
       <ImageAndText
         text="The creation, conception and design of a Gaggeneau"
-        src="./src/assets/images/17.png"
+        src="src/assets/images/17.png"
         imgHeight="482px"
       />
       <ContainerArrowButton>
@@ -16,7 +15,7 @@
       </ContainerArrowButton>
       <ImageAndText
         text="A group of people who work to create, craft and develop"
-        src="./src/assets/images/18.png"
+        src="src/assets/images/18.png"
         imgHeight="295px"
       />
     </ContainerContent>
