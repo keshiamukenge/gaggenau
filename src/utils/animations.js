@@ -16,4 +16,26 @@ export function onLeaveImage(image) {
   });
 }
 
-export default { onImageHovered, onLeaveImage };
+export function appearImageOnScroll(imageClass) {
+  gsap.to(imageClass, {
+    opacity: 1,
+    delay: 0.2,
+    duration: 1,
+  });
+}
+
+export function appearTextOnScroll(textClass) {
+  gsap.to(textClass, {
+    opacity: 1,
+    y: 0,
+    delay: 0.2,
+    duration: 1,
+  });
+}
+
+export default {
+  onImageHovered,
+  onLeaveImage,
+  appearImageOnScroll,
+  appearTextOnScroll,
+};

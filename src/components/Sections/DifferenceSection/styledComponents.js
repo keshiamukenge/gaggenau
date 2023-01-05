@@ -7,6 +7,11 @@ export const MainContainer = styled.section`
   height: fit-content;
   padding: 5rem 5%;
   margin: 10rem 0;
+
+  .difference-section-text {
+    opacity: 0;
+    transform: translateY(50px);
+  }
 `;
 
 export const ContainerContent = styled.div`

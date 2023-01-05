@@ -1,6 +1,10 @@
 <template>
   <ContainerSection>
-    <ContainerImage>
+    <ContainerImage
+      data-scroll
+      data-scroll-id="masterpiece-image"
+      class="masterpiece-image"
+    >
       <img src="@/assets/images/10.png" />
     </ContainerImage>
     <TextBlock
@@ -15,6 +19,23 @@
 </template>
 
 <script setup>
+import { watch } from "vue";
+
+import { appearImageOnScroll } from "@/utils/animations.js";
 import TextBlock from "@/components/TextBlock.vue";
 import { ContainerSection, ContainerImage } from "./styledComponents";
+
+const props = defineProps({
+  startAnimationOnScroll: {
+    type: Boolean,
+    default: false,
+  },
+});
+
+watch(
+  () => props.startAnimationOnScroll,
+  () => {
+    appearImageOnScroll(".masterpiece-image");
+  }
+);
 </script>
