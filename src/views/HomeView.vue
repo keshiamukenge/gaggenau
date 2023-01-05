@@ -1,14 +1,14 @@
 <template>
   <main ref="mainContainer">
     <Hero />
-    <FirstSection />
-    <DifferenceSection />
+    <FirstSection :startAnimationOnScroll="firstSectionInView" />
+    <DifferenceSection :startAnimationOnScroll="differenceSectionInView" />
     <GridSection />
-    <ArtKitchenSection />
-    <SliderSection />
-    <OurMasterpieceSection />
-    <OurMagazineSection />
-    <ImagesSection />
+    <ArtKitchenSection :startAnimationOnScroll="artKitchenSectionInView" />
+    <SliderSection :startAnimationOnScroll="sliderSectionInView" />
+    <OurMasterpieceSection :startAnimationOnScroll="masterpieceSectionInView" />
+    <OurMagazineSection :startAnimationOnScroll="magazineSectionInView" />
+    <ImagesSection :startAnimationOnScroll="imagesSectionInView" />
     <Footer />
   </main>
 </template>
@@ -29,12 +29,49 @@ import SliderSection from "@/components/Sections/SliderSection/SliderSection.vue
 import OurMagazineSection from "@/components/Sections/OurMagazineSection/OurMagazineSection.vue";
 
 const mainContainer = ref(null);
+const artKitchenSectionInView = ref(false);
+const masterpieceSectionInView = ref(false);
+const magazineSectionInView = ref(false);
+const imagesSectionInView = ref(false);
+const firstSectionInView = ref(false);
+const differenceSectionInView = ref(false);
+const sliderSectionInView = ref(false);
 
 async function initSmoothScroll() {
   await nextTick();
-  new LocomotiveScroll({
+  const scroll = new LocomotiveScroll({
     el: mainContainer.value,
     smooth: true,
+  });
+
+  scroll.on("scroll", args => {
+    if (typeof args.currentElements["art-kitchen-image"] === "object") {
+      artKitchenSectionInView.value = true;
+    }
+
+    if (typeof args.currentElements["masterpiece-image"] === "object") {
+      masterpieceSectionInView.value = true;
+    }
+
+    if (typeof args.currentElements["magazine-image-1"] === "object") {
+      magazineSectionInView.value = true;
+    }
+
+    if (typeof args.currentElements["last-section-img-1"] === "object") {
+      imagesSectionInView.value = true;
+    }
+
+    if (typeof args.currentElements["first-section-text"] === "object") {
+      firstSectionInView.value = true;
+    }
+
+    if (typeof args.currentElements["difference-section-text"] === "object") {
+      differenceSectionInView.value = true;
+    }
+
+    if (typeof args.currentElements["slider-section-title"] === "object") {
+      sliderSectionInView.value = true;
+    }
   });
 }
 

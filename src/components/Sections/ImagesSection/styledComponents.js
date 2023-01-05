@@ -9,6 +9,11 @@ export const ContainerImagesSection = styled.section`
   height: 70vh;
   display: flex;
 
+  .last-section-img-1,
+  .last-section-img-2 {
+    opacity: 0;
+  }
+
   @media screen and (max-width: ${s}) {
     .last-section-img-2 {
       width: 100%;

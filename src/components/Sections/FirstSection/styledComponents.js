@@ -26,6 +26,7 @@ export const InformationText = styled.p`
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
 
   @media screen and (max-width: ${s}) {
     font-size: 55px;
