@@ -56,6 +56,8 @@ export const MainText = styled.span`
   text-transform: uppercase;
   font-weight: 200;
   margin-right: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
 
   @media screen and (max-width: ${s}) {
     font-size: 115px;

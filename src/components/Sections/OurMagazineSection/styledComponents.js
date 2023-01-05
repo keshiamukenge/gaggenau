@@ -11,6 +11,12 @@ export const ContainerSection = styled.section`
   background-color: ${colors.black};
   padding: 10% calc(2rem - 20px) 0 2rem;
 
+  .magazine-image-1,
+  .magazine-image-2,
+  .magazine-image-3 {
+    opacity: 0;
+  }
+
   @media screen and (max-width: ${l}) {
     height: fit-content;
     padding: 2rem;

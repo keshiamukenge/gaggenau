@@ -3,7 +3,13 @@
     <ContainerSection>
       <ContainerText>
         <Heading4>Welcome to our</Heading4>
-        <MainText>Milan</MainText>
+        <MainText
+          data-scroll
+          data-scroll-id="slider-section-title"
+          class="slider-section-title"
+        >
+          Milan
+        </MainText>
       </ContainerText>
       <Swiper
         :slides-per-view="1"
@@ -45,12 +51,14 @@
 </template>
 
 <script setup>
+import { watch } from "vue";
 import { ThemeProvider } from "vue3-styled-components";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css/navigation";
 import "swiper/css/parallax";
 import "swiper/css";
 
+import { appearTextOnScroll } from "@/utils/animations.js";
 import { colors } from "@/theme.js";
 import DefaultButton from "../../Button/DefaultButton.vue";
 import { LeftArrowIcon, RightArrowIcon } from "@/assets/SvgIcons";
@@ -64,4 +72,18 @@ import {
   TextContent,
   Heading4,
 } from "./styledComponents";
+
+const props = defineProps({
+  startAnimationOnScroll: {
+    type: Boolean,
+    default: false,
+  },
+});
+
+watch(
+  () => props.startAnimationOnScroll,
+  () => {
+    appearTextOnScroll(".slider-section-title");
+  }
+);
 </script>

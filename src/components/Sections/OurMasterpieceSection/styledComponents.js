@@ -9,6 +9,10 @@ export const ContainerSection = styled.section`
   height: fit-content;
   padding: 0 2rem;
 
+  .masterpiece-image {
+    opacity: 0;
+  }
+
   @media screen and (max-width: ${s}) {
     margin-bottom: 5rem;
   }

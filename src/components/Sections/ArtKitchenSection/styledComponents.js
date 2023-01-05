@@ -11,6 +11,15 @@ export const ContainerSection = styled.section`
   padding: 0 2rem;
   display: flex;
 
+  .art-kitchen-image {
+    opacity: 0;
+  }
+
+  .art-kitchen-title {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
   @media screen and (max-width: ${s}) {
     display: block;
 

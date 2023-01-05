@@ -1,6 +1,12 @@
 <template>
   <SectionElement>
-    <Heading1>Gaggenau</Heading1>
+    <Heading1>
+      <AnimatedLetters
+        word="Gaggenau"
+        :hide="hide"
+        :startLetterPosition="100"
+      />
+    </Heading1>
     <ContainerImage>
       <img src="@/assets/images/13.png" />
     </ContainerImage>
@@ -14,6 +20,8 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from "vue";
+import AnimatedLetters from "@/components/AnimatedLetters.vue";
 import DefaultButton from "@/components/Button/DefaultButton.vue";
 import {
   ContainerImage,
@@ -22,4 +30,12 @@ import {
   Heading1,
   FlexContainer,
 } from "./styledComponents";
+
+const hide = ref(true);
+
+onMounted(() => {
+  setTimeout(() => {
+    hide.value = false;
+  }, 300);
+});
 </script>
