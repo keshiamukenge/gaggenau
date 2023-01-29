@@ -9,7 +9,20 @@ export const ContainerSection = styled.section`
   height: 80vh;
   margin: 15rem 0;
   padding: 0 2rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: max-content;
+
+  img {
+    grid-row: 1/3;
+    grid-column: 3/5;
+  }
+
+  h2 {
+    grid-column: 1/3;
+    padding-left: 4rem;
+    padding-top: 12rem;
+  }
 
   .art-kitchen-image {
     opacity: 0;
@@ -22,6 +35,12 @@ export const ContainerSection = styled.section`
 
   @media screen and (max-width: ${s}) {
     display: block;
+    margin: 0;
+
+    h2 {
+      padding-left: 0;
+      margin-bottom: 1rem;
+    }
 
     .art-kitchen-text {
       width: 100%;
@@ -38,6 +57,10 @@ export const ContainerSection = styled.section`
 
   @media screen and (min-width: ${m}) and (max-width: ${l}) {
     display: block;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
 
     .art-kitchen-text {
       width: 100%;
@@ -65,21 +88,25 @@ export const ContainerTextPart = styled.div`
 `;
 
 export const ContainerPart = styled.div`
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  height: fit-content;
   position: relative;
+  grid-column: 2/3;
+  grid-row: 2;
+
+  @media screen and (min-width: ${m}) and (max-width: ${l}) {
+    margin-bottom: 2rem;
+  }
 `;
 
 export const ContainerTextButton = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 2rem 0;
-  padding-left: 30%;
-  padding-right: 10%;
 
   @media screen and (max-width: ${s}) {
     padding-right: 0;
+    margin-bottom: 2rem;
   }
 
   @media screen and (min-width: ${m}) and (max-width: ${l}) {

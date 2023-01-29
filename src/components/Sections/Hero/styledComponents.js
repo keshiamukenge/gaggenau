@@ -37,13 +37,10 @@ export const SmallParagraph = styled.p`
   }
 `;
 
-export const Heading1 = styled.h1`
+export const ContainerLogoText = styled.div`
   width: 100%;
   margin-top: 3rem;
-
-  @media screen and (max-width: ${s}) {
-    font-size: 15.2vw;
-  }
+  margin-bottom: 27px;
 `;
 
 export const FlexContainer = styled.div`

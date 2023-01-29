@@ -24,7 +24,7 @@ body {
   scroll-behavior: smooth;
 
   h1 {
-    font-size: 16.8vw;
+    font-size: 16.4vw;
     color: $white-color;
     text-transform: uppercase;
     font-weight: 200;
@@ -81,5 +81,20 @@ body {
     object-fit: cover;
     width: 100%;
     height: 100%;
+  }
+
+  canvas {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: -1;
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      display: none;
+    }
   }
 }

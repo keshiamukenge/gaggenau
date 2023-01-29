@@ -15,7 +15,7 @@
       cx="16.5"
       cy="16.5"
       r="15.7839"
-      stroke="white"
+      stroke="rgba(245, 245, 245, 0.5)"
       stroke-width="1.43218"
     />
   </svg>

@@ -1,26 +1,18 @@
 <template>
-  <ContainerSection>
-    <ContainerPart class="art-kitchen-text">
-      <ContainerTextPart>
-        <h2 class="art-kitchen-title">The art of kitchen</h2>
-        <ContainerTextButton>
-          <ThemeProvider :theme="{ color: colors.grey }">
-            <TextElement>
-              See the timeless design of our pieces shine within a myriad of
-              interior styles and discover fellow perfectionists
-            </TextElement>
-          </ThemeProvider>
-          <DefaultButton text="Explore more" />
-        </ContainerTextButton>
-      </ContainerTextPart>
+  <ContainerSection data-scroll data-scroll-id="art-kitchen-image">
+    <h2 class="art-kitchen-title">The art of kitchen</h2>
+    <ContainerPart>
+      <ContainerTextButton>
+        <ThemeProvider :theme="{ color: colors.grey }">
+          <TextElement>
+            See the timeless design of our pieces shine within a myriad of
+            interior styles and discover fellow perfectionists
+          </TextElement>
+        </ThemeProvider>
+        <DefaultButton text="Explore more" />
+      </ContainerTextButton>
     </ContainerPart>
-    <ContainerPart
-      data-scroll
-      data-scroll-id="art-kitchen-image"
-      class="art-kitchen-image"
-    >
-      <img src="@/assets/images/12.png" />
-    </ContainerPart>
+    <img class="art-kitchen-image" src="@/assets/images/12.png" />
   </ContainerSection>
 </template>
 
@@ -36,7 +28,6 @@ import {
   ContainerPart,
   TextElement,
   ContainerTextButton,
-  ContainerTextPart,
 } from "./styledComponents";
 
 const props = defineProps({

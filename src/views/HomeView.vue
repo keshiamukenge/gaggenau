@@ -1,16 +1,20 @@
 <template>
-  <main ref="mainContainer">
-    <Hero />
-    <FirstSection :startAnimationOnScroll="firstSectionInView" />
-    <DifferenceSection :startAnimationOnScroll="differenceSectionInView" />
-    <GridSection />
-    <ArtKitchenSection :startAnimationOnScroll="artKitchenSectionInView" />
-    <SliderSection :startAnimationOnScroll="sliderSectionInView" />
-    <OurMasterpieceSection :startAnimationOnScroll="masterpieceSectionInView" />
-    <OurMagazineSection :startAnimationOnScroll="magazineSectionInView" />
-    <ImagesSection :startAnimationOnScroll="imagesSectionInView" />
-    <Footer />
-  </main>
+  <Webgl>
+    <main ref="mainContainer">
+      <Hero />
+      <FirstSection :startAnimationOnScroll="firstSectionInView" />
+      <DifferenceSection :startAnimationOnScroll="differenceSectionInView" />
+      <GridSection />
+      <ArtKitchenSection :startAnimationOnScroll="artKitchenSectionInView" />
+      <SliderSection :startAnimationOnScroll="sliderSectionInView" />
+      <OurMasterpieceSection
+        :startAnimationOnScroll="masterpieceSectionInView"
+      />
+      <OurMagazineSection :startAnimationOnScroll="magazineSectionInView" />
+      <ImagesSection :startAnimationOnScroll="imagesSectionInView" />
+      <Footer />
+    </main>
+  </Webgl>
 </template>
 
 <script setup>
@@ -27,6 +31,7 @@ import OurMasterpieceSection from "@/components/Sections/OurMasterpieceSection/O
 import ImagesSection from "@/components/Sections/ImagesSection/ImagesSection.vue";
 import SliderSection from "@/components/Sections/SliderSection/SliderSection.vue";
 import OurMagazineSection from "@/components/Sections/OurMagazineSection/OurMagazineSection.vue";
+import Webgl from "@/components/Webgl/Webgl.vue";
 
 const mainContainer = ref(null);
 const artKitchenSectionInView = ref(false);
@@ -73,6 +78,10 @@ async function initSmoothScroll() {
       sliderSectionInView.value = true;
     }
   });
+
+  setTimeout(() => {
+    scroll.update();
+  }, 2000);
 }
 
 onMounted(() => {

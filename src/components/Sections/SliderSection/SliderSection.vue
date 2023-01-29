@@ -8,7 +8,7 @@
           data-scroll-id="slider-section-title"
           class="slider-section-title"
         >
-          Milan
+          Design
         </MainText>
       </ContainerText>
       <Swiper
@@ -40,11 +40,13 @@
       </Swiper>
       <ContainerTextContent>
         <SecondText>Design week</SecondText>
-        <TextContent
-          >This year Gaggeneau stepped out of the eurocucina fairgrounds into
-          its own space at milan's design week</TextContent
-        >
-        <DefaultButton text="Explore more" />
+        <ContainerContentTextContent>
+          <TextContent>
+            This year Gaggeneau stepped out of the eurocucina fairgrounds into
+            its own space at milan's design week
+          </TextContent>
+          <DefaultButton text="Explore more" />
+        </ContainerContentTextContent>
       </ContainerTextContent>
     </ContainerSection>
   </ThemeProvider>
@@ -68,6 +70,7 @@ import {
   MainText,
   ContainerImage,
   ContainerTextContent,
+  ContainerContentTextContent,
   SecondText,
   TextContent,
   Heading4,

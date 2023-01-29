@@ -19,17 +19,25 @@ export const ContainerSection = styled.section`
 `;
 
 export const ContainerImage = styled.div`
-  width: 40%;
-  height: 60vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: auto;
   margin: auto;
 
+  img {
+    grid-column: 2/4;
+  }
+
   @media screen and (max-width: ${s}) {
-    width: 85%;
+    display: flex;
+    width: 100%;
     margin: auto;
     height: 300px;
   }
 
   @media screen and (min-width: ${m}) and (max-width: ${l}) {
-    width: 70%;
+    display: flex;
+    width: 48%;
   }
 `;
