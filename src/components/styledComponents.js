@@ -15,8 +15,8 @@ const animatedLettersProps = {
 };
 
 export const MainContainer = styled("section", mainContainerProps)`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
   height: fit-content;
   padding: ${props => props.padding};
@@ -30,10 +30,14 @@ export const MainContainer = styled("section", mainContainerProps)`
       margin-top: 2rem;
     }
   }
+
+  @media screen and (min-width: ${m}) and (max-width: ${l}) {
+    grid-template-columns: 35vw auto;
+  }
 `;
 
 export const ContainerContent = styled.div`
-  width: 45%;
+  width: 100%;
   height: fit-content;
 
   @media screen and (max-width: ${s}) {
@@ -41,7 +45,7 @@ export const ContainerContent = styled.div`
   }
 
   @media screen and (min-width: ${m}) and (max-width: ${l}) {
-    width: 70%;
+    width: 100%;
   }
 `;
 
@@ -67,6 +71,10 @@ export const SecondParagraph = styled.p`
   height: fit-content;
   line-height: 17px;
   color: ${props => props.theme.color};
+
+  @media screen and (min-width: ${m}) and (max-width: ${l}) {
+    margin-bottom: 1rem;
+  }
 `;
 
 export const ContainerTextButton = styled.div`
@@ -76,6 +84,10 @@ export const ContainerTextButton = styled.div`
 
   @media screen and (max-width: ${s}) {
     display: block;
+  }
+
+  @media screen and (min-width: ${m}) and (max-width: ${l}) {
+    flex-direction: column;
   }
 `;
 

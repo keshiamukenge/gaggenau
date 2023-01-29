@@ -6,7 +6,8 @@ const { s, m, l } = responsive;
 
 export const ContainerSection = styled.section`
   width: 100vw;
-  height: 100vh;
+  height: auto;
+  margin-bottom: 250px;
 
   .swiper {
     div.swiper-button-prev {
@@ -29,6 +30,7 @@ export const ContainerSection = styled.section`
   @media screen and (max-width: ${s}) {
     height: fit-content;
     margin-bottom: 10rem;
+    margin-top: 290px;
   }
 
   @media screen and (min-width: ${m}) and (max-width: ${l}) {
@@ -42,8 +44,8 @@ export const Heading4 = styled.h4`
 `;
 
 export const ContainerText = styled.div`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   @media screen and (max-width: ${s}) {
     display: block;
@@ -51,7 +53,7 @@ export const ContainerText = styled.div`
 `;
 
 export const MainText = styled.span`
-  font-size: 175px;
+  font-size: 200px;
   display: block;
   text-transform: uppercase;
   font-weight: 200;
@@ -60,8 +62,12 @@ export const MainText = styled.span`
   transform: translateY(50px);
 
   @media screen and (max-width: ${s}) {
-    font-size: 115px;
+    font-size: 75px;
     margin: 2rem 0 2rem 2rem;
+  }
+
+  @media screen and (min-width: ${m}) and (max-width: ${l}) {
+    font-size: 100px;
   }
 `;
 
@@ -71,9 +77,11 @@ export const ContainerImage = styled.div`
 `;
 
 export const ContainerTextContent = styled.div`
-  display: flex;
-  width: 80%;
-  margin: 2rem auto 5rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  padding: 0 5rem;
+  margin: 2rem 0;
 
   @media screen and (max-width: ${s}) {
     display: block;
@@ -88,10 +96,25 @@ export const ContainerTextContent = styled.div`
   }
 `;
 
+export const ContainerContentTextContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: ${s}) {
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: ${m}) and (max-width: ${l}) {
+    flex-direction: column;
+    justify-content: initial;
+  }
+`;
+
 export const SecondText = styled.span`
   font-size: 81px;
   font-weight: 400;
   text-transform: uppercase;
+  padding-right: 0.5rem;
 
   @media screen and (max-width: ${s}) {
     margin: 2rem 0;
@@ -101,8 +124,8 @@ export const SecondText = styled.span`
 
 export const TextContent = styled.p`
   color: ${props => props.theme.color};
-  width: 30%;
-  margin: 0 2rem;
+  width: 50%;
+  margin-right: 1rem;
 
   @media screen and (max-width: ${s}) {
     width: 100%;
@@ -110,7 +133,7 @@ export const TextContent = styled.p`
   }
 
   @media screen and (min-width: ${m}) and (max-width: ${l}) {
-    width: 30%;
+    width: 100%;
     margin: 0 1rem 2rem 0;
   }
 `;
