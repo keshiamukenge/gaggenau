@@ -14,7 +14,10 @@ export const ContainerGrid = styled.section`
   grid-gap: 20px;
   margin: 10rem 0;
 
-  .el-3 {
+  .el-8 {
+    grid-column: 3;
+    grid-row: 1;
+
     h3 {
       bottom: initial;
     }
@@ -28,7 +31,7 @@ export const ContainerGrid = styled.section`
       font-size: 18px;
     }
 
-    .el-3 {
+    .el-8 {
       grid-column: 1/3;
       grid-row: 1;
 
@@ -75,6 +78,11 @@ export const ContainerImage = styled.div`
     left: 0;
     bottom: 0;
     right: 0;
+    visibility: hidden;
+
+    @media screen and (min-width: ${m}) and (max-width: ${l}) {
+      visibility: visible;
+    }
   }
 
   @media screen and (max-width: ${s}) {

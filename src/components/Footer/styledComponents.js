@@ -14,7 +14,7 @@ export const ContainerFooter = styled.footer`
   height: fit-content;
   background-color: ${props => props.theme.backgroundColor};
   display: grid;
-  grid-template-columns: 40% 15% 15% 15% 15%;
+  grid-template-columns: 50% 12.5% 12.5% 12.5% 12.5%;
   grid-template-rows: auto auto;
   padding: 8rem 2rem 25rem 2rem;
   grid-row-gap: 2rem;
@@ -65,6 +65,7 @@ export const ContainerFooter = styled.footer`
     display: flex;
     align-items: center;
     height: fit-content;
+    margin-left: auto;
   }
 
   @media screen and (max-width: ${s}) {
@@ -111,6 +112,7 @@ export const ContainerFooter = styled.footer`
     .rs {
       grid-column: 2;
       grid-row: 4;
+      margin-left: 0;
     }
   }
 
@@ -156,6 +158,7 @@ export const ContainerFooter = styled.footer`
     .rs {
       grid-column: 4;
       grid-row: 2;
+      margin-left: 0;
     }
   }
 `;

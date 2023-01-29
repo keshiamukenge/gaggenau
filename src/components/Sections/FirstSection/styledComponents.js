@@ -40,12 +40,12 @@ export const InformationText = styled.p`
 `;
 
 export const ContainerImage = styled.div`
-  width: 50%;
+  width: 48%;
   height: auto;
   margin: auto;
   position: absolute;
   top: 50%;
-  left: 25%;
+  left: 26%;
   transform: translate(-50%, -50%);
 
   @media screen and (max-width: ${s}) {
