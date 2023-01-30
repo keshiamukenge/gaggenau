@@ -80,7 +80,7 @@ export const ContainerImage = styled.div`
     right: 0;
     visibility: hidden;
 
-    @media screen and (min-width: ${m}) and (max-width: ${l}) {
+    @media screen and (max-width: ${l}) {
       visibility: visible;
     }
   }
