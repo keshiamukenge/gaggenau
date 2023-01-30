@@ -8,7 +8,7 @@
         text="This home is a refuge from th rugged wind-swept"
         imgHeight="348px"
       >
-        <img src="@/assets/images/16.png" />
+        <img src="/images/16.png" />
       </ImageAndText>
       <ImageAndText
         class="magazine-image-2"
@@ -17,7 +17,7 @@
         text="The creation, conception and design of a Gaggeneau"
         imgHeight="482px"
       >
-        <img src="@/assets/images/17.png" />
+        <img src="/images/17.png" />
       </ImageAndText>
       <ContainerArrowButton>
         <ArrowButton text="Our magazine" />
@@ -29,7 +29,7 @@
         text="A group of people who work to create, craft and develop"
         imgHeight="295px"
       >
-        <img src="@/assets/images/18.png" />
+        <img src="/images/18.png" />
       </ImageAndText>
     </ContainerContent>
   </ContainerSection>

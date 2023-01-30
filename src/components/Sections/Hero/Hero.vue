@@ -1,10 +1,10 @@
 <template>
   <SectionElement>
     <ContainerLogoText>
-      <img src="@/assets/images/logo-text.svg" />
+      <img src="/images/logo-text.svg" />
     </ContainerLogoText>
     <ContainerImage>
-      <img src="@/assets/images/13.png" />
+      <img src="/images/13.png" />
     </ContainerImage>
     <FlexContainer>
       <SmallParagraph>
