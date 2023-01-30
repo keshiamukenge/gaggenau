@@ -1,7 +1,7 @@
 <template>
   <ContainerHeader>
     <ContainerLogo>
-      <img src="@/assets/images/logo.png" />
+      <img src="/images/logo.png" />
     </ContainerLogo>
     <ThemeProvider :theme="{ color: colors.white }">
       <ContainerItems>

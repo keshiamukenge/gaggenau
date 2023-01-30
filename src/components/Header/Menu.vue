@@ -11,7 +11,7 @@
             >
               <Number>01</Number>
               <ContainerImageMenuItem>
-                <img src="@/assets/images/1.webp" />
+                <img src="/images/1.webp" />
               </ContainerImageMenuItem>
               <MenuItem> Experience </MenuItem>
             </ContainerContentMenuItem>
@@ -24,7 +24,7 @@
             >
               <Number>02</Number>
               <ContainerImageMenuItem>
-                <img src="@/assets/images/8.webp" />
+                <img src="/images/8.webp" />
               </ContainerImageMenuItem>
               <MenuItem> Appliances </MenuItem>
             </ContainerContentMenuItem>
@@ -37,7 +37,7 @@
             >
               <MenuItem> For owners </MenuItem>
               <ContainerImageMenuItem>
-                <img src="@/assets/images/12.png" />
+                <img src="/images/12.png" />
               </ContainerImageMenuItem>
               <Number>03</Number>
             </ContainerContentMenuItem>
@@ -50,7 +50,7 @@
             >
               <Number>04</Number>
               <ContainerImageMenuItem>
-                <img src="@/assets/images/6.webp" />
+                <img src="/images/6.webp" />
               </ContainerImageMenuItem>
               <MenuItem> Collaboration </MenuItem>
             </ContainerContentMenuItem>
@@ -63,7 +63,7 @@
             >
               <MenuItem> Visit us </MenuItem>
               <ContainerImageMenuItem>
-                <img src="@/assets/images/10.png" />
+                <img src="/images/10.png" />
               </ContainerImageMenuItem>
               <Number>05</Number>
             </ContainerContentMenuItem>

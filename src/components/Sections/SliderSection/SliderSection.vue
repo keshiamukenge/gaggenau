@@ -22,17 +22,17 @@
       >
         <SwiperSlide>
           <ContainerImage>
-            <img src="@/assets/images/slider/1.png" />
+            <img src="/images/slider/1.png" />
           </ContainerImage>
         </SwiperSlide>
         <SwiperSlide>
           <ContainerImage>
-            <img src="@/assets/images/slider/2.png" />
+            <img src="/images/slider/2.png" />
           </ContainerImage>
         </SwiperSlide>
         <SwiperSlide>
           <ContainerImage>
-            <img src="@/assets/images/slider/3.png" />
+            <img src="/images/3.png" />
           </ContainerImage>
         </SwiperSlide>
         <LeftArrowIcon class="swiper-button-prev prev" />

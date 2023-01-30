@@ -59,7 +59,7 @@ onMounted(() => {
     // set time
     const elapsedTime = time.getElapsedTime();
 
-    webglStore.planes.value.forEach((plane, id) => {
+    webglStore.planes.value?.forEach((plane, id) => {
       // set scale
       meshes[id].scale.set(
         plane.imageElement.el.getBoundingClientRect().width,
