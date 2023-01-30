@@ -21,6 +21,7 @@
           }"
         >
           <Texture
+            ref="textures"
             :src="imageElement.src"
             :uniform="`tMap${imageElement.id + 1}`"
           />
@@ -80,7 +81,7 @@ let imagesElements = [
     ref: "img1",
     class: "el-1",
     text: "(Ovens)",
-    src: "/src/assets/images/3.png",
+    src: "/images/3.png",
     fragmentShader: getFragmentShader("tMap1"),
   },
   {
@@ -88,7 +89,7 @@ let imagesElements = [
     ref: "img2",
     class: "el-2",
     text: "(Warming drawer)",
-    src: "/src/assets/images/4.png",
+    src: "/images/4.png",
     fragmentShader: getFragmentShader("tMap2"),
   },
   {
@@ -96,7 +97,7 @@ let imagesElements = [
     ref: "img3",
     class: "el-3",
     text: "(Extractors)",
-    src: "/src/assets/images/6.png",
+    src: "/images/6.png",
     fragmentShader: getFragmentShader("tMap3"),
   },
   {
@@ -104,7 +105,7 @@ let imagesElements = [
     ref: "img4",
     class: "el-4",
     text: "(Washing machine)",
-    src: "/src/assets/images/9.png",
+    src: "/images/9.png",
     fragmentShader: getFragmentShader("tMap4"),
   },
   {
@@ -112,7 +113,7 @@ let imagesElements = [
     ref: "img5",
     class: "el-5",
     text: "(Cooktop)",
-    src: "/src/assets/images/8.png",
+    src: "/images/8.png",
     fragmentShader: getFragmentShader("tMap5"),
   },
   {
@@ -120,7 +121,7 @@ let imagesElements = [
     ref: "img6",
     class: "el-6",
     text: "(Refrigerators)",
-    src: "/src/assets/images/11.png",
+    src: "/images/11.png",
     fragmentShader: getFragmentShader("tMap6"),
   },
   {
@@ -128,7 +129,7 @@ let imagesElements = [
     ref: "img7",
     class: "el-7",
     text: "(Dishwasher)",
-    src: "/src/assets/images/5.png",
+    src: "/images/5.png",
     fragmentShader: getFragmentShader("tMap7"),
   },
 ];
@@ -138,6 +139,7 @@ let planes = ref([]);
 
 const containerGrid = ref(null);
 const meshes = ref(null);
+const textures = ref(null);
 
 function onPointerOver(event) {
   if (event.over) {

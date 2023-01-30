@@ -42,8 +42,7 @@ const firstSectionInView = ref(false);
 const differenceSectionInView = ref(false);
 const sliderSectionInView = ref(false);
 
-async function initSmoothScroll() {
-  await nextTick();
+function initSmoothScroll() {
   const scroll = new LocomotiveScroll({
     el: mainContainer.value,
     smooth: true,
@@ -79,9 +78,11 @@ async function initSmoothScroll() {
     }
   });
 
-  setTimeout(() => {
-    scroll.update();
-  }, 2000);
+  nextTick(() => {
+    setTimeout(() => {
+      scroll.update();
+    }, 2000);
+  });
 }
 
 onMounted(() => {
