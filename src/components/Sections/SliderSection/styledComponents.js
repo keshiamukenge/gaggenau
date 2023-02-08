@@ -2,7 +2,7 @@ import styled from "vue3-styled-components";
 
 import responsive from "@/responsive.js";
 
-const { s, m, l } = responsive;
+const { s, m, l, xxl } = responsive;
 
 export const ContainerSection = styled.section`
   width: 100vw;
@@ -46,9 +46,14 @@ export const Heading4 = styled.h4`
 export const ContainerText = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  max-width: ${xxl};
 
   @media screen and (max-width: ${s}) {
     display: block;
+  }
+
+  @media screen and (min-width: ${xxl}) {
+    margin: auto;
   }
 `;
 

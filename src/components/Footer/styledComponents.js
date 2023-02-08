@@ -2,7 +2,7 @@ import styled from "vue3-styled-components";
 
 import breakpoints from "../../responsive";
 
-const { s, m, l } = breakpoints;
+const { s, m, l, xxl } = breakpoints;
 
 const gridPositionProps = {
   gridColumn: String,
@@ -10,15 +10,21 @@ const gridPositionProps = {
 };
 
 export const ContainerFooter = styled.footer`
-  width: 100%;
+  width: 100vw;
   height: fit-content;
   background-color: ${props => props.theme.backgroundColor};
+`;
+
+export const ContainerContent = styled.div`
+  width: 100%;
+  height: fit-content;
   display: grid;
   grid-template-columns: 50% 12.5% 12.5% 12.5% 12.5%;
   grid-template-rows: auto auto;
   padding: 8rem 2rem 25rem 2rem;
   grid-row-gap: 2rem;
   padding-bottom: 5rem;
+  max-width: ${xxl};
 
   .contact-button {
     grid-column: 1/3;
@@ -160,6 +166,10 @@ export const ContainerFooter = styled.footer`
       grid-row: 2;
       margin-left: 0;
     }
+  }
+
+  @media screen and (min-width: ${xxl}) {
+    margin: auto;
   }
 `;
 

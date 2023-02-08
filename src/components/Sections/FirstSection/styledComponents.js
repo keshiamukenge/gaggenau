@@ -2,17 +2,22 @@ import styled from "vue3-styled-components";
 
 import breakpoints from "../../../responsive";
 
-const { s, m, l } = breakpoints;
+const { s, m, l, xxl } = breakpoints;
 
 export const SectionElement = styled.section`
   width: 100%;
   height: 100vh;
   position: relative;
   margin-top: 10rem;
+  max-width: ${xxl};
 
   @media screen and (max-width: ${s}) {
     padding: 0 2rem;
     height: 60vh;
+  }
+
+  @media screen and (min-width: ${xxl}) {
+    margin: 10rem auto 0 auto;
   }
 `;
 

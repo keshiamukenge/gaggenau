@@ -2,7 +2,7 @@ import styled from "vue3-styled-components";
 
 import breakpoints from "../../../responsive";
 
-const { s, m, l } = breakpoints;
+const { s, m, l, xxl } = breakpoints;
 
 export const ContainerGrid = styled.section`
   width: 100%;
@@ -13,6 +13,7 @@ export const ContainerGrid = styled.section`
   grid-template-rows: auto;
   grid-gap: 20px;
   margin: 10rem 0;
+  max-width: ${xxl};
 
   .el-8 {
     grid-column: 3;
@@ -60,6 +61,10 @@ export const ContainerGrid = styled.section`
     h3 {
       font-size: 22px;
     }
+  }
+
+  @media screen and (min-width: ${xxl}) {
+    margin: 10rem auto;
   }
 `;
 

@@ -3,6 +3,7 @@ export const breakpoints = {
   m: "768px",
   l: "1023px",
   xl: "1024px",
+  xxl: "1920px",
 };
 
 export default breakpoints;

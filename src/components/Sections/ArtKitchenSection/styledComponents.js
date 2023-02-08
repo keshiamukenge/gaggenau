@@ -2,7 +2,7 @@ import styled from "vue3-styled-components";
 
 import breakpoints from "../../../responsive";
 
-const { s, m, l } = breakpoints;
+const { s, m, l, xxl } = breakpoints;
 
 export const ContainerSection = styled.section`
   width: 100%;
@@ -12,6 +12,7 @@ export const ContainerSection = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: max-content;
+  max-width: ${xxl};
 
   img {
     grid-row: 1/3;
@@ -79,6 +80,10 @@ export const ContainerSection = styled.section`
       margin: auto;
       height: 300px;
     }
+  }
+
+  @media screen and (min-width: ${xxl}) {
+    margin: 15rem auto;
   }
 `;
 
