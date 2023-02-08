@@ -14,17 +14,14 @@
         @pointerOver="onPointerOver"
       >
         <ShaderMaterial
+          ref="shader"
           :props="{
-            uniforms: uniforms,
-            vertexShader: vertexShader,
-            fragmentShader: imageElement.fragmentShader,
+            uniforms: THREE.UniformsUtils.clone(material.uniforms),
+            vertexShader: material.clone().vertexShader,
+            fragmentShader: material.clone().fragmentShader,
           }"
         >
-          <Texture
-            ref="textures"
-            :src="imageElement.src"
-            :uniform="`tMap${imageElement.id + 1}`"
-          />
+          <Texture ref="textures" :src="imageElement.src" uniform="tMap" />
         </ShaderMaterial>
       </Plane>
       <img :ref="imageElement.ref" :src="imageElement.src" />
@@ -43,37 +40,45 @@ import { onMounted, ref } from "vue";
 import * as THREE from "three";
 import gsap from "gsap";
 
-import getFragmentShader from "../../Webgl/shaders/fragmentShader";
+import fragmentShader from "../../Webgl/shaders/fragmentShader";
 import vertexShader from "../../Webgl/shaders/vertexShader";
 import { useWebglStore } from "@/stores/webgl";
 import { ArrowButton } from "../../Button";
 import { ContainerGrid, ContainerImage, TextContent } from "./styledComponents";
 
-const uniforms = {
-  uPlaneSizes: { value: new THREE.Vector2(0, 0) },
-  uImageSizes: { value: new THREE.Vector2(0, 0) },
-  uViewportSizes: {
-    value: new THREE.Vector2(window.innerWidth, window.innerHeight),
+const material = new THREE.ShaderMaterial({
+  uniforms: {
+    uPlaneSizes: {
+      value: new THREE.Vector2(0, 0),
+    },
+    uImageSizes: {
+      value: new THREE.Vector2(0, 0),
+    },
+    uViewportSizes: {
+      value: new THREE.Vector2(window.innerWidth, window.innerHeight),
+    },
+    uTime: {
+      value: 0,
+    },
+    uFrequence: {
+      value: 0.0,
+    },
+    uAmplitude: {
+      value: 0.0,
+    },
+    uAlpha: {
+      value: 0.0,
+    },
+    uAspect: {
+      value: 0.0,
+    },
+    uOffset: {
+      value: new THREE.Vector2(),
+    },
   },
-  uTime: {
-    value: 0,
-  },
-  uFrequence: {
-    value: 0.0,
-  },
-  uAmplitude: {
-    value: 0.0,
-  },
-  uAlpha: {
-    value: 0.0,
-  },
-  uAspect: {
-    value: 0.0,
-  },
-  uOffset: {
-    value: new THREE.Vector2(),
-  },
-};
+  vertexShader,
+  fragmentShader,
+});
 
 let imagesElements = [
   {
@@ -82,7 +87,7 @@ let imagesElements = [
     class: "el-1",
     text: "(Ovens)",
     src: "/images/3.png",
-    fragmentShader: getFragmentShader("tMap1"),
+    texture: new THREE.TextureLoader().load("/images/3.png"),
   },
   {
     id: 1,
@@ -90,7 +95,7 @@ let imagesElements = [
     class: "el-2",
     text: "(Warming drawer)",
     src: "/images/4.png",
-    fragmentShader: getFragmentShader("tMap2"),
+    texture: new THREE.TextureLoader().load("/images/4.png"),
   },
   {
     id: 2,
@@ -98,7 +103,7 @@ let imagesElements = [
     class: "el-3",
     text: "(Extractors)",
     src: "/images/6.png",
-    fragmentShader: getFragmentShader("tMap3"),
+    texture: new THREE.TextureLoader().load("/images/6.png"),
   },
   {
     id: 3,
@@ -106,7 +111,7 @@ let imagesElements = [
     class: "el-4",
     text: "(Washing machine)",
     src: "/images/9.png",
-    fragmentShader: getFragmentShader("tMap4"),
+    texture: new THREE.TextureLoader().load("/images/9.png"),
   },
   {
     id: 4,
@@ -114,7 +119,7 @@ let imagesElements = [
     class: "el-5",
     text: "(Cooktop)",
     src: "/images/8.png",
-    fragmentShader: getFragmentShader("tMap5"),
+    texture: new THREE.TextureLoader().load("/images/8.png"),
   },
   {
     id: 5,
@@ -122,7 +127,7 @@ let imagesElements = [
     class: "el-6",
     text: "(Refrigerators)",
     src: "/images/11.png",
-    fragmentShader: getFragmentShader("tMap6"),
+    texture: new THREE.TextureLoader().load("/images/11.png"),
   },
   {
     id: 6,
@@ -130,7 +135,7 @@ let imagesElements = [
     class: "el-7",
     text: "(Dishwasher)",
     src: "/images/5.png",
-    fragmentShader: getFragmentShader("tMap7"),
+    texture: new THREE.TextureLoader().load("/images/5.png"),
   },
 ];
 
@@ -140,6 +145,7 @@ let planes = ref([]);
 const containerGrid = ref(null);
 const meshes = ref(null);
 const textures = ref(null);
+const shader = ref(null);
 
 function onPointerOver(event) {
   if (event.over) {
