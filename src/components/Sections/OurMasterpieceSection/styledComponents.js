@@ -2,12 +2,13 @@ import styled from "vue3-styled-components";
 
 import breakpoints from "../../../responsive";
 
-const { s, m, l } = breakpoints;
+const { s, m, l, xxl } = breakpoints;
 
 export const ContainerSection = styled.section`
   width: 100%;
   height: fit-content;
   padding: 0 2rem;
+  max-width: ${xxl};
 
   .masterpiece-image {
     opacity: 0;
@@ -15,6 +16,10 @@ export const ContainerSection = styled.section`
 
   @media screen and (max-width: ${s}) {
     margin-bottom: 5rem;
+  }
+
+  @media screen and (min-width: ${xxl}) {
+    margin: auto;
   }
 `;
 

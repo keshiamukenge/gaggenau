@@ -3,7 +3,7 @@ import breakpoints from "../../../responsive";
 
 import { colors } from "@/theme.js";
 
-const { s, m, l } = breakpoints;
+const { s, m, l, xxl } = breakpoints;
 
 export const ContainerSection = styled.section`
   width: 100vw;
@@ -55,6 +55,7 @@ export const ContainerContent = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
+  max-width: ${xxl};
 
   @media screen and (max-width: ${s}) {
     grid-template-columns: 100%;
@@ -63,5 +64,9 @@ export const ContainerContent = styled.div`
 
   @media screen and (min-width: ${m}) and (max-width: ${l}) {
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: ${xxl}) {
+    margin: auto;
   }
 `;

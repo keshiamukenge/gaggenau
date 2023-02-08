@@ -2,7 +2,7 @@ import styled from "vue3-styled-components";
 
 import breakpoints from "../../../responsive";
 
-const { s, m, l } = breakpoints;
+const { s, m, l, xxl } = breakpoints;
 
 export const ContainerSection = styled.section`
   width: 100%;
@@ -12,6 +12,7 @@ export const ContainerSection = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: max-content;
+  max-width: ${xxl};
 
   img {
     grid-row: 1/3;
@@ -21,7 +22,10 @@ export const ContainerSection = styled.section`
   h2 {
     grid-column: 1/3;
     padding-left: 4rem;
-    padding-top: 12rem;
+    padding-bottom: 2rem;
+    margin-top: auto;
+    max-width: 500px;
+    text-align: left;
   }
 
   .art-kitchen-image {
@@ -35,7 +39,8 @@ export const ContainerSection = styled.section`
 
   @media screen and (max-width: ${s}) {
     display: block;
-    margin: 0;
+    margin: 15rem 0 0 0;
+    height: fit-content;
 
     h2 {
       padding-left: 0;
@@ -57,6 +62,8 @@ export const ContainerSection = styled.section`
 
   @media screen and (min-width: ${m}) and (max-width: ${l}) {
     display: block;
+    text-align: center;
+    margin: 15rem 0 8rem 0;
 
     h2 {
       margin-bottom: 2rem;
@@ -74,6 +81,10 @@ export const ContainerSection = styled.section`
       height: 300px;
     }
   }
+
+  @media screen and (min-width: ${xxl}) {
+    margin: 15rem auto;
+  }
 `;
 
 export const ContainerTextPart = styled.div`
@@ -88,14 +99,23 @@ export const ContainerTextPart = styled.div`
 `;
 
 export const ContainerPart = styled.div`
-  width: 100%;
+  width: 60%;
   height: fit-content;
   position: relative;
-  grid-column: 2/3;
+  grid-column: 1/3;
   grid-row: 2;
+  margin-left: auto;
+  padding-right: 4rem;
+
+  @media screen and (max-width: ${s}) {
+    margin-left: initial;
+    width: 100%;
+  }
 
   @media screen and (min-width: ${m}) and (max-width: ${l}) {
     margin-bottom: 2rem;
+    width: 60%;
+    margin-left: 25%;
   }
 `;
 
@@ -110,8 +130,7 @@ export const ContainerTextButton = styled.div`
   }
 
   @media screen and (min-width: ${m}) and (max-width: ${l}) {
-    padding-left: 50%;
-    padding-right: 0;
+    padding-right: 4rem;
   }
 `;
 

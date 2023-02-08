@@ -9,7 +9,7 @@
     <Camera
       ref="camera"
       :position="{ z: 600 }"
-      :fov="70"
+      :fov="cameraFov"
       :aspect="cameraAspect"
       :near="100"
     />
@@ -27,6 +27,7 @@ import { useWebglStore } from "@/stores/webgl";
 
 const renderer = ref(null);
 const cameraAspect = window.innerWidth / window.innerHeight;
+const cameraFov = 2 * Math.atan(window.innerHeight / 2 / 600) * (180 / Math.PI);
 const scene = ref(null);
 const camera = ref(null);
 
@@ -50,6 +51,10 @@ onMounted(() => {
 
   setMousePosition();
 
+  window.addEventListener("resize", () => {
+    camera.value.camera.updateProjectionMatrix();
+  });
+
   renderer.value.onAfterRender(() => {
     //set raycaster
     renderer.value.three.pointer.intersect();
@@ -69,19 +74,27 @@ onMounted(() => {
 
       // set position
       meshes[id].position.x =
-        plane.imageElement.el.getBoundingClientRect().x -
+        plane.imageElement.el.getBoundingClientRect().left -
         window.innerWidth / 2 +
         plane.imageElement.el.getBoundingClientRect().width / 2;
 
       meshes[id].position.y =
-        -plane.imageElement.el.getBoundingClientRect().y +
+        -plane.imageElement.el.getBoundingClientRect().top +
         window.innerHeight / 2 -
         plane.imageElement.el.getBoundingClientRect().height / 2;
 
-      meshes[id].position.z = 1;
+      meshes[id].position.z = 0.5;
 
       // set uniforms
       plane.mesh.material.uniforms.uTime.value = elapsedTime * 5;
+
+      meshes[id].material.uniforms.uImageSizes.value.x =
+        plane.imageElement.el.naturalWidth;
+      meshes[id].material.uniforms.uImageSizes.value.y =
+        plane.imageElement.el.naturalHeight;
+
+      meshes[id].material.uniforms.uPlaneSizes.value.x = meshes[id].scale.x;
+      meshes[id].material.uniforms.uPlaneSizes.value.y = meshes[id].scale.y;
     });
   });
 });
