@@ -2,7 +2,7 @@ import styled from "vue3-styled-components";
 
 import breakpoints from "../responsive";
 
-const { s, m, l } = breakpoints;
+const { s, m, l, xxl } = breakpoints;
 
 const mainContainerProps = {
   margin: String,
@@ -21,6 +21,7 @@ export const MainContainer = styled("section", mainContainerProps)`
   height: fit-content;
   padding: ${props => props.padding};
   margin: ${props => props.margin};
+  max-width: ${xxl};
 
   @media screen and (max-width: ${s}) {
     display: block;
@@ -33,6 +34,10 @@ export const MainContainer = styled("section", mainContainerProps)`
 
   @media screen and (min-width: ${m}) and (max-width: ${l}) {
     grid-template-columns: 35vw auto;
+  }
+
+  @media screen and (min-width: ${xxl}) {
+    margin: 10rem auto;
   }
 `;
 
