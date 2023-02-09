@@ -1,8 +1,10 @@
 import styled from "vue3-styled-components";
 
 import breakpoints from "../responsive";
+import { fonts } from "@/theme";
 
 const { s, m, l, xxl } = breakpoints;
+const { title } = fonts;
 
 const mainContainerProps = {
   margin: String,
@@ -64,6 +66,7 @@ export const MainParagraph = styled.p`
   height: fit-content;
   line-height: 32px;
   margin-bottom: 2rem;
+  font-family: ${title};
 
   @media screen and (max-width: ${s}) {
     margin-top: 2rem;

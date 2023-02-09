@@ -8,7 +8,7 @@
       An exceptional reputation built by hand since 1683
     </InformationText>
     <ContainerImage data-scroll data-scroll-speed="2">
-      <img src="/images/1.png" />
+      <img src="/images/1.webp" />
     </ContainerImage>
   </SectionElement>
 </template>

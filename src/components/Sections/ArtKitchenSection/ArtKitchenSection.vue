@@ -12,7 +12,7 @@
         <DefaultButton text="Explore more" />
       </ContainerTextButton>
     </ContainerPart>
-    <img class="art-kitchen-image" src="/images/12.png" />
+    <img class="art-kitchen-image" src="/images/12.webp" />
   </ContainerSection>
 </template>
 

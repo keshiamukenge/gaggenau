@@ -1,8 +1,10 @@
 import styled from "vue3-styled-components";
 
 import responsive from "@/responsive.js";
+import { fonts } from "@/theme";
 
 const { s, m, l, xxl } = responsive;
+const { body } = fonts;
 
 export const ContainerSection = styled.section`
   width: 100vw;
@@ -65,6 +67,7 @@ export const MainText = styled.span`
   margin-right: 2rem;
   opacity: 0;
   transform: translateY(50px);
+  font-family: ${body};
 
   @media screen and (max-width: ${s}) {
     font-size: 75px;
@@ -87,6 +90,7 @@ export const ContainerTextContent = styled.div`
   width: 100%;
   padding: 0 5rem;
   margin: 2rem 0;
+  max-width: ${xxl};
 
   @media screen and (max-width: ${s}) {
     display: block;
@@ -98,6 +102,10 @@ export const ContainerTextContent = styled.div`
   @media screen and (min-width: ${m}) and (max-width: ${l}) {
     width: 100%;
     padding: 0 2rem;
+  }
+
+  @media screen and (min-width: ${xxl}) {
+    margin: 2rem auto;
   }
 `;
 
