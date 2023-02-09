@@ -6,7 +6,8 @@ export const colors = {
 };
 
 export const fonts = {
-  main: "acumin-pro, sans-serif",
+  title: "AtypDisplay-Regular",
+  body: "AtypDisplay-Light",
 };
 
 export default { colors, fonts };

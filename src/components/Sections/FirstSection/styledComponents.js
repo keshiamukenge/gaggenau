@@ -1,8 +1,10 @@
 import styled from "vue3-styled-components";
 
 import breakpoints from "../../../responsive";
+import { fonts } from "../../../theme";
 
 const { s, m, l, xxl } = breakpoints;
+const { title } = fonts;
 
 export const SectionElement = styled.section`
   width: 100%;
@@ -32,6 +34,7 @@ export const InformationText = styled.p`
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
+  font-family: ${title};
 
   @media screen and (max-width: ${s}) {
     font-size: 55px;

@@ -1,6 +1,10 @@
 <template>
   <ThemeProvider :theme="{ color: colors.white }">
-    <ContainerArrowButton ref="containerButton" @mouseenter="onHover">
+    <ContainerArrowButton
+      ref="containerButton"
+      @mouseenter="onEnter"
+      @mouseleave="onLeave"
+    >
       <TextArrowButton>{{ text }}</TextArrowButton>
       <ArrowCircleIcon :startAnimation="startAnimation" />
     </ContainerArrowButton>
@@ -25,11 +29,11 @@ defineProps({
   },
 });
 
-function onHover() {
+function onEnter() {
   startAnimation.value = true;
+}
 
-  setTimeout(() => {
-    startAnimation.value = false;
-  }, 700);
+function onLeave() {
+  startAnimation.value = false;
 }
 </script>

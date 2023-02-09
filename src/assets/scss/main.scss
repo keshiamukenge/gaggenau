@@ -3,13 +3,22 @@
   src: local("AtypDisplay-Light"),
     url("@/assets/fonts/AtypDisplay-Light.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "AtypDisplay-Regular";
+  src: local("AtypDisplay-Regular"),
+    url("@/assets/fonts/AtypDisplay-Regular.ttf") format("truetype");
+}
+
 // COLORS
 $black: #101010;
 $white-color: #ffffff;
 $dark-grey-color: #1c1c1c;
 $grey-color: #616062;
+
 // FONTS
-$main-font: "AtypDisplay-Light";
+$main-font: "AtypDisplay-Regular";
+
 // FONTS SIZES
 $h1-desktop-size: 50px;
 

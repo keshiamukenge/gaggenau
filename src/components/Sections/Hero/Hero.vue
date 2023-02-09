@@ -4,7 +4,7 @@
       <img src="/images/logo-text.svg" />
     </ContainerLogoText>
     <ContainerImage>
-      <img src="/images/13.png" />
+      <img src="/images/13.webp" />
     </ContainerImage>
     <FlexContainer>
       <SmallParagraph>
