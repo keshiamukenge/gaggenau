@@ -5,7 +5,7 @@
       data-scroll-id="masterpiece-image"
       class="masterpiece-image"
     >
-      <img src="/images/10.png" />
+      <img src="/images/10.webp" />
     </ContainerImage>
     <TextBlock
       heading4="Our masterpiece"
