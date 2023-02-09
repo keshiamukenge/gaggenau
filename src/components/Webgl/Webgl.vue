@@ -24,6 +24,7 @@ import { ref, onMounted } from "vue";
 import * as THREE from "three";
 
 import { useWebglStore } from "@/stores/webgl";
+import { useIsMobileDeviceStore } from "@/stores/isMobileDevice";
 
 const renderer = ref(null);
 const cameraAspect = window.innerWidth / window.innerHeight;
@@ -33,6 +34,8 @@ const camera = ref(null);
 
 function setMousePosition() {
   window.addEventListener("mousemove", event => {
+    if (isMobileDevice.isMobileDevice) return;
+
     renderer.value.three.pointer.positionN.x =
       (event.clientX / window.innerWidth) * 2 - 1;
     renderer.value.three.pointer.positionN.y =
@@ -41,6 +44,7 @@ function setMousePosition() {
 }
 
 const webglStore = useWebglStore();
+const isMobileDevice = useIsMobileDeviceStore();
 
 onMounted(() => {
   const canvas = document.querySelector("canvas");
@@ -50,19 +54,24 @@ onMounted(() => {
   const meshes = scene.value.scene.children;
 
   setMousePosition();
-
   window.addEventListener("resize", () => {
     camera.value.camera.updateProjectionMatrix();
   });
 
   renderer.value.onAfterRender(() => {
+    if (isMobileDevice.isMobileDevice) return;
+
     //set raycaster
     renderer.value.three.pointer.intersect();
   });
 
   renderer.value.onBeforeRender(() => {
+    if (isMobileDevice.isMobileDevice) return;
+
     // set time
     const elapsedTime = time.getElapsedTime();
+
+    console.log("run webgl");
 
     webglStore.planes.value?.forEach((plane, id) => {
       // set scale
