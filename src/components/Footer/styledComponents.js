@@ -80,7 +80,7 @@ export const ContainerContent = styled.div`
     padding: 8rem 5% 8rem 5%;
 
     .contact-button {
-      grid-column: 1/3;
+      grid-column: 1/6;
       grid-row: 1;
       margin-bottom: 2rem;
     }
@@ -91,17 +91,17 @@ export const ContainerContent = styled.div`
     }
 
     .product-list {
-      grid-column: 1/3;
+      grid-column: 1;
       grid-row: 3;
     }
 
     .inspiration-title {
-      grid-column: 2;
+      grid-column: 3;
       grid-row: 2;
     }
 
     .inspiration-list {
-      grid-column: 2;
+      grid-column: 3;
       grid-row: 3;
     }
 
@@ -116,9 +116,27 @@ export const ContainerContent = styled.div`
     }
 
     .rs {
-      grid-column: 2;
+      grid-column: 3;
       grid-row: 4;
       margin-left: 0;
+    }
+
+    .legal-mentions {
+      grid-column: 1 / span 3;
+      grid-row: 6;
+      padding-right: 0;
+    }
+
+    .content-mention {
+      grid-column: 1;
+      grid-row: 7;
+      margin-top: 0;
+    }
+
+    .designer-mention {
+      grid-column: 3;
+      grid-row: 7;
+      margin-top: 0;
     }
   }
 
@@ -166,6 +184,17 @@ export const ContainerContent = styled.div`
       grid-row: 2;
       margin-left: 0;
     }
+
+    .legal-mentions {
+      grid-column: 1/3;
+      grid-row: 5;
+      padding-right: 5rem;
+    }
+
+    .content-mention {
+      grid-column: 3;
+      grid-row: 5;
+    }
   }
 
   @media screen and (min-width: ${xxl}) {
@@ -196,5 +225,62 @@ export const Item = styled.h5`
     color: #ffffff;
     transition: 400ms linear;
     cursor: pointer;
+  }
+`;
+
+export const LegalMentions = styled("p", gridPositionProps)`
+  grid-column: ${props => props.gridColumn};
+  grid-row: ${props => props.gridRow};
+  width: 100%;
+  height: fit-content;
+  font-size: 14px;
+  color: ${props => props.theme.grey};
+  margin-top: 6rem;
+  padding-right: 50%;
+  min-width: 200px;
+`;
+
+export const DesignerMention = styled("p", gridPositionProps)`
+  grid-column: ${props => props.gridColumn};
+  grid-row: ${props => props.gridRow};
+  width: fit-content;
+  height: fit-content;
+  color: ${props => props.theme.grey};
+  font-size: 14px;
+  margin-top: 6rem;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: ${props => props.theme.grey};
+    text-decoration: underline;
+
+    &:hover {
+      color: #ffffff;
+      transition: 400ms linear;
+    }
+  }
+`;
+
+export const ContentMention = styled("p", gridPositionProps)`
+  grid-column: ${props => props.gridColumn};
+  grid-row: ${props => props.gridRow};
+  width: 100%;
+  height: fit-content;
+  color: ${props => props.theme.grey};
+  font-size: 14px;
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: ${props => props.theme.grey};
+    text-decoration: underline;
+
+    &:hover {
+      color: #ffffff;
+      transition: 400ms linear;
+    }
   }
 `;

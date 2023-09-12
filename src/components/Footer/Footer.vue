@@ -1,6 +1,10 @@
 <template>
   <ThemeProvider
-    :theme="{ backgroundColor: colors.black, titleColor: colors.white }"
+    :theme="{
+      backgroundColor: colors.black,
+      titleColor: colors.white,
+      grey: colors.grey,
+    }"
   >
     <ContainerFooter>
       <ContainerContent>
@@ -41,6 +45,23 @@
           <PinterestIcon />
           <YoutubeIcon />
         </ListTitle>
+        <LegalMentions class="legal-mentions" gridColumn="1" gridRow="5">
+          All materials are the property of their owners and are used for
+          educational and non-commercial purposes.
+        </LegalMentions>
+        <ContentMention class="content-mention" gridColumn="2" gridRow="5">
+          Content :
+          <a target="_blank" href="https://www.gaggenau.com/">gaggenau.com</a>
+        </ContentMention>
+        <DesignerMention class="designer-mention" gridColumn="5" gridRow="5">
+          Designed by
+          <a
+            target="_blank"
+            href="https://www.behance.net/gallery/156337103/Gaggenauwebsite-redesign"
+          >
+            Maria Sheveleva
+          </a>
+        </DesignerMention>
       </ContainerContent>
     </ContainerFooter>
   </ThemeProvider>
@@ -58,5 +79,8 @@ import {
   ContainerItems,
   Item,
   ContainerContent,
+  LegalMentions,
+  DesignerMention,
+  ContentMention,
 } from "./styledComponents";
 </script>
