@@ -71,8 +71,6 @@ onMounted(() => {
     // set time
     const elapsedTime = time.getElapsedTime();
 
-    console.log("run webgl");
-
     webglStore.planes.value?.forEach((plane, id) => {
       // set scale
       meshes[id].scale.set(
